@@ -71,6 +71,7 @@ if __name__ == '__main__':
     
     #bitwise_and operation
     cartoon=cv2.bitwise_and(mat,mat,mask=edge)
+    cv2.imshow("cartoonized",cartoon)
     cv2.imwrite(f'{out_image}',cartoon)
 
     cv2.waitKey(0)
