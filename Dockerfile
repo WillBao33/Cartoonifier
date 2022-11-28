@@ -60,4 +60,3 @@ RUN apt-get -qq update \
 RUN git clone https://github.com/WillBao33/Cartoonifier.git
 
 RUN cd Cartoonifier/
-
