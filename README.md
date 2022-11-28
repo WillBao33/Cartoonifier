@@ -3,7 +3,7 @@ This is the official github repo of Cartoonifier.
 
 Cartoonifier is an application that cartoonizes the person in an image:
 
-<img src=./test_1.jpg width="20%" height="20%">
+<img src=./cartoon.png width="100%" height="100%">
 
 ## Platform information
 Hardware info 
