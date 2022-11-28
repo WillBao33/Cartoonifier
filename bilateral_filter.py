@@ -40,7 +40,7 @@ def bilateral_filter(image, radius, sigma_color, sigma_space):
 if __name__ == '__main__':
     file_path = '/home/will/cv_course/test_1.jpg'
     image = cv2.imread(file_path, 1)
-    # 高斯滤波
+    
     scale_percent = 20 # percent of original size
     width = int(image.shape[1] * scale_percent / 100)
     height = int(image.shape[0] * scale_percent / 100)
@@ -50,9 +50,9 @@ if __name__ == '__main__':
     resized = cv2.resize(image, dim, interpolation = cv2.INTER_AREA)
     #gray_img = cv2.cvtColor(resized, cv2.COLOR_BGR2GRAY)
     gauss = cv2.GaussianBlur(resized, (5, 5), 1)
-    # 双边滤波
-    start = time.time()
+    
     bilateral = cv2.bilateralFilter(resized, d=5, sigmaColor=15, sigmaSpace=10)
+    start = time.time()
     mat = bilateral_filter(resized, radius=5, sigma_color=15, sigma_space=10)
     end = time.time()
     print('processing time = {} min {} s'.format(int((end - start) / 60), int((end - start) % 60)))
