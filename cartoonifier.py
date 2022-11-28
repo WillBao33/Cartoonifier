@@ -71,7 +71,7 @@ if __name__ == '__main__':
     mat = bilateral_filter(resized,radius=5,sigma_color=15,sigma_space=10)
     end = time.time()
     print('processing time = {} min {} s'.format(int((end - start) / 60), int((end - start) % 60)))
-    cv2.imwrite('/home/will/cv_course/bf_2.png',mat)
+    
     #bitwise_and operation
     cartoon=cv2.bitwise_and(mat,mat,mask=edge)
     cartoon_2 = cv2.bitwise_and(mat,mat,mask=edge_2)
