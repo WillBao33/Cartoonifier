@@ -57,6 +57,6 @@ RUN apt-get -qq update \
     && rm -rf /var/lib/apt/lists/* \
     && apt-get -qq autoremove \
     && apt-get -qq clean
-RUN git clone https://github.com/WillBao33/Cartoonifier.git
+RUN git clone https://github.com/WillBao33/Fine-Art-Portrait.git
 
 RUN cd Cartoonifier/
