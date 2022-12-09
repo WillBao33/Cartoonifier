@@ -18,15 +18,15 @@ def get_args():
     parser.add_argument('--image', '-i', default='image.png', metavar='FILE', help='Specify the image that will be processed')
     parser.add_argument('--output', '-o', default='image.png', metavar='FILE', help='Specify the processed image output name and location')
     return parser.parse_args()
-#read image
+
 
 if __name__ == '__main__':
     args = get_args()
     image = args.image
     out_image = args.output
-    #print(image)
+    
     image = cv2.imread(f'{image}',1)
-    #cv2.imshow('original',image)
+    
 
     #resize image
     scale_percent = 20 # percent of original size
@@ -75,10 +75,9 @@ if __name__ == '__main__':
     #bitwise_and operation
     cartoon=cv2.bitwise_and(mat,mat,mask=edge)
     cartoon_2 = cv2.bitwise_and(mat,mat,mask=edge_2)
-    #cv2.imwrite(f'{out_image}',cartoon)
+    
 
-    # cv2.waitKey(0)
-    # cv2.destroyAllWindows()
+    
     plt.figure(figsize=(10, 10))
     plt.suptitle('Fine Art Portrait')
     plt.subplot(2, 2, 1), plt.title('Original Image')
