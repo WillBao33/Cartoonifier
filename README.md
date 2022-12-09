@@ -1,7 +1,7 @@
-# Cartoonifier
-This is the official github repo of Cartoonifier.
+# Fine Art Portrait
+This is the official github repo of Fine Art Portrait.
 
-Cartoonifier is an application that cartoonizes the person in an image:
+Fine Art Portrait is an application that turns a photographic portrait into a fine art portrait:
 
 <img src=./cartoon.png width="100%" height="100%">
 
@@ -38,7 +38,7 @@ cd ./Cartoonifier
 docker build -t cartoonifier .
 docker run --rm -it    --user=$(id -u)    --env="DISPLAY"    --workdir=/opt/build    --volume="$PWD":/app    --volume="/etc/group:/etc/group:ro"    --volume="/etc/passwd:/etc/passwd:ro"    --volume="/etc/shadow:/etc/shadow:ro"    --volume="/etc/sudoers.d:/etc/sudoers.d:ro"    --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" cartoonifier:latest bash
 cd Cartoonifier
-python3 cartoonifier.py -i ./test_1.jpg
+python3 portrait.py -i ./test_1.jpg
 ```
 ### Run without Docker
 Make sure you have the required dependencies: OpenCV, matplotlib, and numpy.
@@ -47,5 +47,5 @@ You can install OpenCV following this [link](https://vitux.com/opencv_ubuntu/)
 ```
 cd ./Cartoonifier
 pip3 install -r requirements.txt
-python3 cartoonifier.py -i ./test_1.jpg
+python3 portrait.py -i ./test_1.jpg
 ```
