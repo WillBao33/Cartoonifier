@@ -14,9 +14,9 @@ from edge_2 import edge_mask
 
 
 def get_args():
-    parser = argparse.ArgumentParser(description='Image Cartoonifier')
-    parser.add_argument('--image', '-i', default='image.png', metavar='FILE', help='Specify the image that will be cartoonized')
-    parser.add_argument('--output', '-o', default='image.png', metavar='FILE', help='Specify the cartoonized image output name and location')
+    parser = argparse.ArgumentParser(description='Fine Art Portrait')
+    parser.add_argument('--image', '-i', default='image.png', metavar='FILE', help='Specify the image that will be processed')
+    parser.add_argument('--output', '-o', default='image.png', metavar='FILE', help='Specify the processed image output name and location')
     return parser.parse_args()
 #read image
 
@@ -80,14 +80,14 @@ if __name__ == '__main__':
     # cv2.waitKey(0)
     # cv2.destroyAllWindows()
     plt.figure(figsize=(10, 10))
-    plt.suptitle('Cartoonifier')
+    plt.suptitle('Fine Art Portrait')
     plt.subplot(2, 2, 1), plt.title('Original Image')
     plt.imshow(cv2.cvtColor(resized, cv2.COLOR_BGR2RGB)), plt.axis('off')
     plt.subplot(2, 2, 2), plt.title('my bilateral filter')
     plt.imshow(cv2.cvtColor(mat, cv2.COLOR_BGR2RGB)), plt.axis('off')
-    plt.subplot(2, 2, 3), plt.title('Cartoonized with Canny')
+    plt.subplot(2, 2, 3), plt.title('Fine Art Portrait with Canny')
     plt.imshow(cv2.cvtColor(cartoon, cv2.COLOR_BGR2RGB)), plt.axis('off')
-    plt.subplot(2, 2, 4), plt.title('Cartoonized with AdaptiveThreshold')
+    plt.subplot(2, 2, 4), plt.title('Fine Art Portrait with AdaptiveThreshold')
     plt.imshow(cv2.cvtColor(cartoon_2, cv2.COLOR_BGR2RGB)), plt.axis('off')
     
     plt.show()
