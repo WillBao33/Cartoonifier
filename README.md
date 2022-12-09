@@ -34,10 +34,10 @@ git clone https://github.com/WillBao33/Cartoonifier.git
 ### Run with Docker
 To build the Docker image and execute the application, run:
 ```
-cd ./Cartoonifier
-docker build -t cartoonifier .
-docker run --rm -it    --user=$(id -u)    --env="DISPLAY"    --workdir=/opt/build    --volume="$PWD":/app    --volume="/etc/group:/etc/group:ro"    --volume="/etc/passwd:/etc/passwd:ro"    --volume="/etc/shadow:/etc/shadow:ro"    --volume="/etc/sudoers.d:/etc/sudoers.d:ro"    --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" cartoonifier:latest bash
-cd Cartoonifier
+cd ./Fine-Art-Portrait
+docker build -t portrait .
+docker run --rm -it    --user=$(id -u)    --env="DISPLAY"    --workdir=/opt/build    --volume="$PWD":/app    --volume="/etc/group:/etc/group:ro"    --volume="/etc/passwd:/etc/passwd:ro"    --volume="/etc/shadow:/etc/shadow:ro"    --volume="/etc/sudoers.d:/etc/sudoers.d:ro"    --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" portrait:latest bash
+cd Fine-Art-Portrait
 python3 portrait.py -i ./test_1.jpg
 ```
 ### Run without Docker
@@ -45,7 +45,7 @@ Make sure you have the required dependencies: OpenCV, matplotlib, and numpy.
 
 You can install OpenCV following this [link](https://vitux.com/opencv_ubuntu/)
 ```
-cd ./Cartoonifier
+cd ./Fine-Art-Portrait
 pip3 install -r requirements.txt
 python3 portrait.py -i ./test_1.jpg
 ```
