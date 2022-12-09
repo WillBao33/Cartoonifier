@@ -59,4 +59,4 @@ RUN apt-get -qq update \
     && apt-get -qq clean
 RUN git clone https://github.com/WillBao33/Fine-Art-Portrait.git
 
-RUN cd Cartoonifier/
+RUN cd Fine-Art-Portrait/
