@@ -11,7 +11,7 @@ Hardware info
 GPU: NVIDIA RTX 3080Ti
 CPU: AMD Ryzen 9 5950X
 RAM: 32G
-SSD: 512G + 1T
+SSD: 512G + 2T
 ```
 
 Software info
@@ -32,6 +32,8 @@ Make sure you have Docker installed.
 git clone https://github.com/WillBao33/Cartoonifier.git
 ```
 ### Run with Docker
+Building the docker image would take a while due to installation of OpenCV, so feel free to grab a cup of coffee :)
+
 To build the Docker image and execute the application, run:
 ```
 cd ./Fine-Art-Portrait
