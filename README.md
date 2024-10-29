@@ -29,7 +29,7 @@ Make sure you have Docker installed.
 
 ## Instruction 
 ```
-git clone https://github.com/WillBao33/Cartoonifier.git
+git clone https://github.com/WillBao33/Fine-Art-Portrait.git
 ```
 ### Run with Docker
 Building the docker image would take a while due to installation of OpenCV, so feel free to grab a cup of coffee :)
